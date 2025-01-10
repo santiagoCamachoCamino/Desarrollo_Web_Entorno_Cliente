@@ -1,0 +1,21 @@
+- PREGUNTAS CONCEPTUALES -
+1. ¿Qué es el evento DOMContentLoaded y por qué se utiliza en este proyecto?
+    El evento DOMContentLoaded se utiliza para detectar cuando el documento HTML ha sido completamente cargado y parseado, pero no cuando los recursos externos como imágenes, videos, etc. hayan sido cargados. 
+    Y se utiliza en este proyecto para ejecutar el código JavaScript una vez que el documento HTML esté listo.
+2. ¿Cómo funciona la navegación entre reseñas en este proyecto?
+    Funciona mediante un array, donde en una función al hacer click, suma uno a su indicea, para luego indicarle que posición del array se debe mostrar.
+3. ¿Qué hace la función showPerson y cómo se relaciona con el array reviews?
+    Esta función es la que muestra el contenido dentro del array de acuerdo a su indice, la cual va cargando cada cosa a traves de su variable, donde se obtuvo al inicio de la pagina.
+
+4. ¿Qué sucede si el valor de currentItem es mayor que la longitud del array reviews?
+    Si el valor es mayor a la longitud inicial del array , se muestra el primer elemento del array, ya que el valor de currentItem se resetea a cero.
+5. ¿Cómo se genera una reseña aleatoria y qué función se utiliza para ello?
+    Se emplea la función Math.randow, donde genera un número aleatorio entre cero y la longitud del array, la cual ese numero se guarda en una varibale y se llama a la función showPerson. 
+6. ¿Qué pasaría si el array reviews estuviera vacío?
+    Si el array estuviera vacio, no se monstraria la información, solo la que se encuentra en el HTML, ya que la función showPerson no encuentra nada para mostrar. Además de que los botones de navegación no funcionarian.
+- MODIFICACIONES SOBRE EL CÓDIGO -
+7. ¿Cómo podrías modificar el código para que la navegación entre reseñas sea automática cada 5 segundos?
+    Para hacer esto, se podría utilizar la función setInterval, la cual ejecuta una función a intervalos de acuerdo a los segundos que queramos agregar, esta se la agregaria al final, con la función de mostrar la siguiente reseña.
+
+8. ¿Cómo podrías agregar un botón para detener y reanudar la navegación automática?
+    Para agregar un botón para detener y reanudar la navegación automática, se podría utilizar la función para quitar el intervalo, la cual detiene la ejecución de una función a intervalos , y se le agregaría un evento al botón para que cuando se haga click,  se detenga o se reanude la navegación automática.
